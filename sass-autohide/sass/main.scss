@@ -1,0 +1,57 @@
+@import "utilities/variables";
+
+body {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.nav {
+  border:1px solid purple;
+  padding: 10px;
+  overflow: hidden;
+  width: 2em;
+  transition: width 2s;
+
+  &__title {
+    color: burlywood;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+  }
+
+  &__link {
+    padding: 0;
+    list-style-type: none;
+    background-color: antiquewhite;
+    width: 100%;
+
+    &:before {
+      content: "[]";
+      margin-right: 2em;
+    }
+  }
+
+  &--autohide:hover, &--locked {
+    width: $menu-width;
+  }
+
+  > #lock {
+    cursor: pointer;
+  }
+
+}
+
+.content {
+  border: 1px solid darkred;
+  padding: 10px;
+  flex: 1;
+}
