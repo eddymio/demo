@@ -1,0 +1,40 @@
+.nav {
+  border: $border-width solid purple;
+  padding: $mini-padding;
+  overflow: hidden;
+  width: $menu-min-width;
+  transition: width 2s;
+
+  &__title {
+    color: burlywood;
+  }
+
+  &__menu {
+    background-color: pink;
+  }
+
+  &__link {
+    list-style-type: none;
+    background-color: antiquewhite;
+    font-size: $mini-size;
+    height: $mini-size;
+    line-height: $mini-size;
+    overflow: hidden;
+
+    &:before {
+      content: "[]";
+      width: $menu-min-width;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+
+  &--autohide:hover, &--locked {
+    width: $menu-width;
+  }
+
+  > #lock {
+    cursor: pointer;
+  }
+
+}

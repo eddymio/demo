@@ -1,5 +1,35 @@
-body {
+body, ul {
   margin: 0; }
+
+ul, li {
+  padding: 0; }
+
+.nav {
+  border: 10px solid purple;
+  padding: 5px;
+  overflow: hidden;
+  width: 50px;
+  transition: width 2s; }
+  .nav__title {
+    color: burlywood; }
+  .nav__menu {
+    background-color: pink; }
+  .nav__link {
+    list-style-type: none;
+    background-color: antiquewhite;
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    overflow: hidden; }
+    .nav__link:before {
+      content: "[]";
+      width: 50px;
+      text-align: center;
+      display: inline-block; }
+  .nav--autohide:hover, .nav--locked {
+    width: 250px; }
+  .nav > #lock {
+    cursor: pointer; }
 
 .page {
   display: flex;
@@ -7,34 +37,9 @@ body {
   box-sizing: border-box;
   height: 100vh; }
 
-.nav {
-  border: 1px solid purple;
-  padding: 10px;
-  overflow: hidden;
-  width: 2em;
-  transition: width 2s; }
-  .nav__title {
-    color: burlywood; }
-  .nav__menu {
-    margin: 0;
-    padding: 0;
-    background-color: pink; }
-  .nav__link {
-    padding: 0;
-    list-style-type: none;
-    background-color: antiquewhite;
-    width: 100%; }
-    .nav__link:before {
-      content: "[]";
-      margin-right: 2em; }
-  .nav--autohide:hover, .nav--locked {
-    width: 250px; }
-  .nav > #lock {
-    cursor: pointer; }
-
 .content {
-  border: 1px solid darkred;
-  padding: 10px;
+  border: 10px solid darkred;
+  padding: 5px;
   flex: 1; }
 
 /*# sourceMappingURL=main.css.map */

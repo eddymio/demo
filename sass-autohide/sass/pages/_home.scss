@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  padding: $mini-padding;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.content {
+  border: $border-width solid darkred;
+  padding: $mini-padding;
+  flex: 1;
+}
