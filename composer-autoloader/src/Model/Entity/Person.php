@@ -5,8 +5,8 @@ namespace App\Model\Entity;
 
 class Person
 {
-    private $name;
-    private $age;
+    private string $name;
+    private int $age;
 
     public function __construct($name, $age)
     {
@@ -14,7 +14,7 @@ class Person
         $this->age = $age;
     }
 
-    public function sayHello()
+    public function sayHello(): void
     {
         echo "Hello ".$this->name . ", I'm ".$this->age;
     }

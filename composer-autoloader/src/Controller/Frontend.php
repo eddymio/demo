@@ -14,7 +14,7 @@ class Frontend
         $this->person = new Person("Owner", 70);    
     }
 
-    public function home()
+    public function home(): void
     {
         $this->person->sayHello();
     }
