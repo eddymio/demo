@@ -7,5 +7,4 @@ INSERT INTO app_book (title, person_id) VALUES ('The dynasty of Dawn', LAST_INSE
 INSERT INTO app_person (name, age) VALUES ('George', 55);
 INSERT INTO app_book (title, person_id) VALUES ('The descendant of hope', LAST_INSERT_ID());
 INSERT INTO app_person (name, age) VALUES ('Emmy', 24);
-INSERT INTO app_book (title, person_id) VALUES ('The mortal lady', LAST_INSERT_ID());
-
+INSERT INTO app_book (title, person_id) VALUES ('The mortal lady', LAST_INSERT_ID()), ('Ocean 12', LAST_INSERT_ID());

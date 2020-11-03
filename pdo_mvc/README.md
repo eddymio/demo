@@ -9,5 +9,6 @@ Retrieve the vendor libraries and autoloader configuration using :
 $ composer dump-autoload
 
 
-For more details about the codebase, follow the [tutorial on LinksTraffic] (https://linkstraffic.net/).
+For more details about the codebase, follow the 
+[tutorial on LinksTraffic](https://linkstraffic.net/).
 

@@ -10,11 +10,11 @@ abstract class DBAccess
     public function __construct()
     {
         try {
-        $this->db = new \PDO('mysql:host=db;dbname=test;charset=utf8', 'test', 'testpass');
+        $this->db = new \PDO("mysql:host=db;dbname=test;charset=utf8", "test", "testpass");
         $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         
         } catch (PDOException $e) {
-            echo 'Connection error : ' . $e->getMessage();
+            echo "Connection error : " . $e->getMessage();
         }
     }
 }

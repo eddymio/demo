@@ -7,5 +7,5 @@ use App\Controller\Frontend;
 $controller = new Frontend();
 
 $controller->helloEveryone();
-$controller->separator();
+$controller::separator();
 $controller->helloWithBooks();

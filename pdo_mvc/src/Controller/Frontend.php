@@ -8,8 +8,9 @@ use App\Model\Entity\Person;
 
 class Frontend
 {
+    public const BR_TAG = "<br/>";
     private array $persons;
-    private ?Manager $manager;
+    private Manager $manager;
 
     public function __construct() 
     {
@@ -23,7 +24,7 @@ class Frontend
         foreach($this->persons as $person)
         {
             $person->sayHello();
-            echo "<br/>";
+            echo self::BR_TAG;
         }
     }
 
@@ -33,13 +34,15 @@ class Frontend
 
         foreach($this->persons as $person)
         {
+            echo "<fieldset><legend>";
             $person->sayHello();
+            echo "</legend>";
             $person->sayHelloToMyBooks();
-            echo "<br/>";
+            echo "</fieldset>";
         }
     }
     
-    public function separator(): void 
+    public static function separator(): void 
     {
         echo "<hr/>";
     }
