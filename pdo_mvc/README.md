@@ -10,5 +10,5 @@ $ composer dump-autoload
 
 
 For more details about the codebase, follow the 
-[tutorial on LinksTraffic](https://linkstraffic.net/).
+[tutorial on LinksTraffic](https://linkstraffic.net/php-pdo-mvc/).
 
