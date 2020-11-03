@@ -3,19 +3,44 @@ declare(strict_types = 1);
 
 namespace App\Controller;
 
+use App\Model\Manager;
 use App\Model\Entity\Person;
 
 class Frontend
 {
-    private Person $person;
+    private array $persons;
+    private ?Manager $manager;
 
     public function __construct() 
     {
-        $this->person = new Person("Owner", 70);    
+        $this->manager = new Manager();
     }
 
-    public function home(): void
+    public function helloEveryone(): void
     {
-        $this->person->sayHello();
+        $this->persons = $this->manager->getPersons();    
+
+        foreach($this->persons as $person)
+        {
+            $person->sayHello();
+            echo "<br/>";
+        }
+    }
+
+    public function helloWithBooks(): void
+    {
+        $this->persons = $this->manager->getPersonsAndBooks();    
+
+        foreach($this->persons as $person)
+        {
+            $person->sayHello();
+            $person->sayHelloToMyBooks();
+            echo "<br/>";
+        }
+    }
+    
+    public function separator(): void 
+    {
+        echo "<hr/>";
     }
 }

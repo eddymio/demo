@@ -5,18 +5,23 @@ namespace App\Model\Entity;
 
 class Person
 {
-    private $name;
-    private $age;
+    public int $id;
+    private string $name;
+    private int $age;
     
-    private $books;
+    public array $books = [];
 
-    public function __construct()
-    {
-        echo "Calling me...";
-    }
-
-    public function sayHello()
+    public function sayHello(): void
     {
         echo "Hello ".$this->name . ", I'm ".$this->age;
+    }
+
+    public function sayHelloToMyBooks(): void
+    {
+        foreach($this->books as $book)
+        {
+            $book->sayHello();
+            echo "<br/>";
+        }
     }
 }

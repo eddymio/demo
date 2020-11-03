@@ -5,17 +5,18 @@ namespace App\Model\Entity;
 
 class Book
 {
-    private $title;
-    private $date;
+    private int $id;
+    private string $title;
+    private string $date;
 
-    public function __construct($name, $age)
+    public function __construct($title, $date)
     {
-        $this->name = $name;
-        $this->age = $age;
+        $this->title = $title;
+        $this->date = $date;
     }
 
-    public function sayHello()
+    public function sayHello(): void
     {
-        echo "Hello ".$this->name . ", I'm ".$this->age;
+        echo $this->title . " got on ".$this->date;
     }
 }
